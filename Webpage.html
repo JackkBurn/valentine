@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+            margin: 100px;
+        }
+
+        #message-container {
+            display: none;
+            margin-top: 50px;
+        }
+
+        #heart-img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+
+        #ask-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #ff6b6b;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #response-message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        #top-gif {
+            width: 300px; /* Adjust the width as needed */
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Added GIF at the top -->
+    <img id="top-gif" src="cat-valentines.gif" alt="GIF">
+
+    <h1>Will You Be My Valentine?</h1>
+
+    <button id="ask-button" onclick="askToBeValentine()">Answer</button>
+
+    <div id="message-container">
+        <!-- Added line of text -->
+        <p id="response-message">.</p>
+        <!-- Specify the local image filename here -->
+        <img id="heart-img" src="yuuna.jpg" alt="Heart Emoji">
+        <p id="response-message"></p>
+		<h2>I knew you'd say that ;) Yuuna Approves </h2>
+		
+    </div>
+
+    <script>
+        function askToBeValentine() {
+            // Display the hidden message container
+            document.getElementById('message-container').style.display = 'block';
+
+            // Get a random response for a playful touch
+            const responses = ['Yes, I\'d love to!', 'Yes of course wtf', 'YESYESYESYESYESYES!', 'YES PLSSSS!'];
+            const randomIndex = Math.floor(Math.random() * responses.length);
+            const responseMessage = responses[randomIndex];
+
+            // Display the response message
+            document.getElementById('response-message').innerText = responseMessage;
+        }
+    </script>
+
+</body>
+</html>
